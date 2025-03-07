@@ -1,0 +1,290 @@
+explicacion py
+
+🔹 1. Mostrar la Presentación
+python
+Copiar
+Editar
+def mostrar_presentacion():
+    print("""
+====================================
+ ███████╗██╗  ██╗ █████╗ ███╗   ██╗
+ ██╔════╝██║  ██║██╔══██╗████╗  ██║
+ ███████╗███████║███████║██╔██╗ ██║
+ ╚════██║██╔══██║██╔══██║██║╚██╗██║
+ ███████║██║  ██║██║  ██║██║ ╚████║
+ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+====================================
+       Bienvenido a SHANEKE
+====================================
+""")
+Función mostrar_presentacion(): Muestra un arte ASCII y un mensaje de bienvenida.
+print(""" ... """): Usa triple comillas (""") para imprimir varias líneas de texto.
+🔹 2. Pedir la Contraseña
+python
+Copiar
+Editar
+def pedir_contraseña():
+    while True:
+        contraseña = input("Ingresa la contraseña para continuar: ")
+        if contraseña == "sh2025":
+            print("Acceso concedido.")
+            break
+        else:
+            print("Contraseña incorrecta. Intenta de nuevo.")
+while True:: Mantiene un bucle infinito hasta que se ingrese la contraseña correcta.
+input("Ingresa la contraseña para continuar: "): Permite al usuario escribir la contraseña.
+if contraseña == "sh2025":: Si la contraseña es correcta, muestra "Acceso concedido." y sale del bucle (break).
+else:: Si es incorrecta, muestra "Contraseña incorrecta. Intenta de nuevo." y vuelve a pedirla.
+🔹 3. Preguntar si Quiere Continuar
+python
+Copiar
+Editar
+def confirmar_continuar():
+    while True:
+        respuesta = input("¿Deseas continuar? (S/N): ").strip().lower()
+        if respuesta in ["s", "yes", "y"]:
+            return True
+        elif respuesta in ["n", "no"]:
+            print("Operación cancelada.")
+            return False
+        else:
+            print("Opción inválida. Responde con S o N.")
+while True:: Mantiene un bucle hasta que el usuario ingrese una respuesta válida.
+input("¿Deseas continuar? (S/N): ").strip().lower():
+strip(): Elimina espacios en blanco extras.
+lower(): Convierte la respuesta a minúsculas.
+Si la respuesta es "s", "yes", "y", retorna True y permite continuar.
+Si la respuesta es "n" o "no", muestra "Operación cancelada." y retorna False (finaliza el programa).
+Si la respuesta no es válida, muestra "Opción inválida." y vuelve a preguntar.
+🔹 4. Ejecutar el Menú
+python
+Copiar
+Editar
+def ejecutar_menu():
+    print("Cargando el menú...")
+    os.system("menubat.bat")  # Ejecuta menubat.bat
+    input("\nPresiona Enter para volver al inicio...")
+print("Cargando el menú..."): Mensaje de carga.
+os.system("menubat.bat"): Ejecuta el archivo menubat.bat en el sistema.
+input("\nPresiona Enter para volver al inicio..."): Espera que el usuario presione Enter antes de reiniciar.
+🔹 5. Flujo Principal (__main__)
+python
+Copiar
+Editar
+if __name__ == "__main__":
+    while True:
+        mostrar_presentacion()
+        pedir_contraseña()
+        if confirmar_continuar():
+            ejecutar_menu()
+if __name__ == "__main__":: Se asegura de que el código solo se ejecute si el script es el programa principal.
+while True:: Mantiene el programa en un bucle infinito, haciendo que el proceso se repita después de cada ejecución del menú.
+Ejecuta las funciones en orden:
+mostrar_presentacion() → Muestra el banner.
+pedir_contraseña() → Pide la contraseña.
+confirmar_continuar() → Pregunta si quiere continuar.
+Si responde "S", "Y" o "YES" → Ejecuta menubat.bat con ejecutar_menu().
+Al terminar, vuelve a empezar.
+🔹 Resumen del Flujo
+Muestra la bienvenida (mostrar_presentacion()).
+Pide la contraseña (sh2025) (pedir_contraseña()).
+Si es incorrecta, vuelve a pedirla.
+Si es correcta, sigue con la confirmación.
+Pregunta si desea continuar (confirmar_continuar()).
+Si responde S, YES o Y, ejecuta menubat.bat.
+Si responde N, muestra "Operación cancelada." y no hace nada más.
+Ejecuta menubat.bat y vuelve a empezar (ejecutar_menu()).
+El programa sigue corriendo hasta que el usuario lo cierre manualmente.
+🔹 Posibles Mejoras
+Ocultar la contraseña al escribirla:
+
+Se puede usar getpass en lugar de input():
+python
+Copiar
+Editar
+import getpass
+contraseña = getpass.getpass("Ingresa la contraseña: ")
+Esto oculta la contraseña mientras se escribe, mejorando la seguridad.
+Cerrar el programa después de una cierta cantidad de intentos fallidos:
+
+Se puede agregar un contador de intentos para evitar bloqueos infinitos.
+
+Importaciones:
+python
+Copiar
+import time
+import webbrowser
+import os  # Para ejecutar el archivo menu.py
+time: Permite hacer pausas (como time.sleep()) para dar tiempo entre acciones en el programa.
+webbrowser: Usado para abrir enlaces en el navegador.
+os: Utilizado para ejecutar comandos del sistema, en este caso, ejecutar el script menu.py.
+Función principal rastrear_numero():
+python
+Copiar
+def rastrear_numero():
+    while True:
+        print(""" 
+============================================ 
+          📍 MÓDULO 1: RASTREAR NÚMERO 📍 
+============================================ 
+1️⃣  Generar link de rastreo (YouTube/Grabify/IPLogger) 
+2️⃣  Usar Seeker para ubicación en tiempo real 
+3️⃣  Consultar bases de datos (Truecaller/GEOfinder) 
+0️⃣  Volver 
+99️⃣ Ejecutar menu.py (Volver al menú principal) 
+============================================ 
+""")
+rastrear_numero(): Es la función principal que controla el menú donde el usuario elige una opción para rastrear números.
+while True:: El ciclo while hace que el menú se repita continuamente hasta que el usuario seleccione la opción de salir (0).
+print(...): Imprime un menú con las opciones disponibles: generar un link de rastreo, usar Seeker, consultar bases de datos, volver al menú anterior y ejecutar menu.py (opción "99").
+python
+Copiar
+        opcion = input("Selecciona una opción: ")
+input(): Muestra un mensaje y espera a que el usuario ingrese una opción.
+python
+Copiar
+        if opcion == "1":
+            generar_link_rastreo()
+        elif opcion == "2":
+            usar_seeker()
+        elif opcion == "3":
+            consultar_bases_datos()
+        elif opcion == "0":
+            return
+        elif opcion == "99":
+            ejecutar_menu_principal()
+Verifica la opción ingresada:
+Si el usuario elige "1", se llama a la función generar_link_rastreo().
+Si elige "2", se llama a la función usar_seeker().
+Si elige "3", se llama a la función consultar_bases_datos().
+Si elige "0", el programa termina la función actual y vuelve al programa anterior (si lo hay).
+Si elige "99", se llama a la función ejecutar_menu_principal() para ejecutar el script menu.py.
+python
+Copiar
+        else:
+            print("❌ Opción no válida. Inténtalo de nuevo.")
+            time.sleep(2)
+Si el usuario ingresa una opción no válida, muestra un mensaje de error y espera 2 segundos antes de volver a mostrar el menú.
+Función generar_link_rastreo():
+python
+Copiar
+def generar_link_rastreo():
+    print("""
+============================================
+      🔗 Generar Link de Rastreo
+============================================
+1️⃣  Usar Grabify
+2️⃣  Usar IPLogger
+3️⃣  Usar RastrearNúmero.com
+0️⃣  Volver
+99️⃣ Ejecutar menu.py (Volver al menú principal)
+============================================
+""")
+Muestra el menú para generar un link de rastreo, con opciones para usar Grabify, IPLogger o RastrearNúmero.com, además de volver y la opción de ejecutar menu.py con "99".
+python
+Copiar
+    opcion = input("Selecciona una opción: ")
+Solicita al usuario que seleccione una opción.
+python
+Copiar
+    if opcion == "1":
+        webbrowser.open("https://grabify.link/")
+    elif opcion == "2":
+        webbrowser.open("https://iplogger.org/")
+    elif opcion == "3":
+        webbrowser.open("https://rastrearnumero.com/herramientas/link/crearlink.php")
+    elif opcion == "0":
+        return
+    elif opcion == "99":
+        ejecutar_menu_principal()
+Dependiendo de la opción ingresada, abre el sitio web correspondiente en el navegador.
+Si el usuario elige "99", ejecuta menu.py con la función ejecutar_menu_principal().
+python
+Copiar
+    else:
+        print("❌ Opción no válida.")
+    input("Presiona Enter para volver...")
+    rastrear_numero()
+Si el usuario ingresa una opción no válida, muestra un mensaje de error.
+Luego, espera que el usuario presione Enter para regresar al menú principal de rastreo (rastrear_numero()).
+Función usar_seeker():
+python
+Copiar
+def usar_seeker():
+    print("""
+============================================
+      📡 Usar Seeker para Ubicación
+============================================
+Pasos:
+1️⃣  Instalar Seeker con:
+      git clone https://github.com/thewhiteh4t/seeker.git
+2️⃣  Ingresar en la carpeta:
+      cd seeker
+3️⃣  Ejecutar Seeker:
+      python3 seeker.py
+============================================
+99️⃣ Ejecutar menu.py (Volver al menú principal)
+""")
+Muestra las instrucciones para instalar y usar Seeker, además de la opción "99" para ejecutar menu.py.
+python
+Copiar
+    opcion = input("Selecciona una opción: ")
+    
+    if opcion == "99":
+        ejecutar_menu_principal()
+Si el usuario selecciona "99", ejecuta menu.py.
+python
+Copiar
+    input("Presiona Enter para volver...")
+    rastrear_numero()
+Espera que el usuario presione Enter y regresa al menú principal.
+Función consultar_bases_datos():
+python
+Copiar
+def consultar_bases_datos():
+    print("""
+============================================
+      🔍 Consultar Bases de Datos
+============================================
+1️⃣  Usar Truecaller
+2️⃣  Usar GEOfinder
+0️⃣  Volver
+99️⃣ Ejecutar menu.py (Volver al menú principal)
+============================================
+""")
+Muestra el menú para consultar bases de datos como Truecaller y GEOfinder, junto con la opción "99" para ejecutar menu.py.
+python
+Copiar
+    opcion = input("Selecciona una opción: ")
+    
+    if opcion == "1":
+        webbrowser.open("https://www.truecaller.com/")
+    elif opcion == "2":
+        webbrowser.open("https://geofinder.mobi/")
+    elif opcion == "0":
+        return rastrear_numero()
+    elif opcion == "99":
+        ejecutar_menu_principal()
+Dependiendo de la opción seleccionada, abre el sitio web correspondiente o regresa al menú principal si el usuario selecciona "0". Si selecciona "99", ejecuta menu.py.
+python
+Copiar
+    else:
+        print("❌ Opción no válida.")
+    input("Presiona Enter para volver...")
+    rastrear_numero()
+Muestra un mensaje de error si la opción no es válida y vuelve al menú principal.
+Función ejecutar_menu_principal():
+python
+Copiar
+def ejecutar_menu_principal():
+    # Ejecuta el archivo menu.py
+    os.system("python menu.py")
+Ejecuta el script menu.py mediante el comando del sistema os.system("python menu.py"). Esto lanza menu.py en una nueva ejecución y detiene la ejecución del programa actual.
+Ejecutar el script:
+python
+Copiar
+if __name__ == "__main__":
+    rastrear_numero()
+Inicia el programa llamando a la función rastrear_numero() cuando se ejecuta este script.
+Resumen:
+Este código crea un menú interactivo para rastrear números de teléfono con diferentes opciones. También permite ejecutar un archivo menu.py al seleccionar la opción "99", lo que reinicia el flujo del programa.

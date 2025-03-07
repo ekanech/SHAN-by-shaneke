@@ -1,0 +1,71 @@
+import time
+import subprocess
+
+def pedir_contrasena():
+    PASSWORD = "chaneque2025"
+    intentos = 3
+    while intentos > 0:
+        password = input("🔒 Ingresa la contraseña: ")
+        if password == PASSWORD:
+            print("\n✅ Acceso concedido. Cargando menú...\n")
+            time.sleep(2)
+            return True
+        else:
+            intentos -= 1
+            print(f"❌ Contraseña incorrecta. Intentos restantes: {intentos}\n")
+    print("🚫 Acceso denegado. Saliendo...")
+    time.sleep(2)
+    exit()
+
+def mostrar_menu():
+    print("""
+============================================
+             🔥 MENÚ PRINCIPAL 🔥
+============================================
+1️⃣  Rastrear Número
+2️⃣  Obtener Cuenta
+3️⃣  OSINT
+4️⃣  Hacking
+5️⃣  SPY (Monitoreo)
+6️⃣  Recuperación de Datos (Forense)
+7️⃣  Metadatos
+8️⃣  WiFi Hack
+9️⃣  Historial (Sábana de Llamadas)
+🔟  Tutoriales
+0️⃣  Salir
+============================================
+""")
+    while True:
+        opcion = input("Selecciona una opción: ")
+        
+        if opcion == "1":
+            subprocess.run(["python", "modulo1.py"])
+        elif opcion == "2":
+            subprocess.run(["python", "modulo2.py"])
+        elif opcion == "3":
+            subprocess.run(["python", "modulo3.py"])
+        elif opcion == "4":
+            subprocess.run(["python", "modulo4.py"])
+        elif opcion == "5":
+            subprocess.run(["python", "modulo5.py"])
+        elif opcion == "6":
+            subprocess.run(["python", "modulo6.py"])
+        elif opcion == "7":
+            subprocess.run(["python", "modulo7.py"])
+        elif opcion == "8":
+            subprocess.run(["python", "modulo8.py"])
+        elif opcion == "9":
+            subprocess.run(["python", "modulo9.py"])
+        elif opcion == "10":
+            subprocess.run(["python", "modulo10.py"])
+        elif opcion == "0":
+            print("Saliendo...")
+            time.sleep(2)
+            exit()
+        else:
+            print("❌ Opción no válida. Inténtalo de nuevo.")
+            time.sleep(2)
+
+if __name__ == "__main__":
+    if pedir_contrasena():
+        mostrar_menu()
