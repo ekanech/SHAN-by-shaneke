@@ -1,12 +1,14 @@
-# 🔐 Shan by Shaneke
+# 🔐 Shan by Shaneke (ekanech) (ekenach) 
 
 **Herramienta integral especializada en seguridad informática.**
+
+****recopilacion de herramientas de codigo abierto, api y automatizacion all in one****
 
 ## 📌 Introducción
 
 Shan by Shaneke es una herramienta integral especializada en seguridad informática, diseñada para realizar tareas avanzadas de OSINT, hacking ético, rastreo, monitoreo, análisis forense, recuperación de datos, entre otras funcionalidades. Este proyecto facilita y automatiza procesos relacionados con la obtención, análisis y gestión de información sensible.
 
-## 🌟 Características
+## 🌟 Características   (en construccion)
 
 - ✅ **Rastreo de Números:** Localización precisa y obtención de información de números telefónicos.
 - ✅ **OSINT:** Extracción y análisis avanzado de información pública.
