@@ -9,7 +9,6 @@ Shan by Shaneke es una herramienta integral especializada en seguridad informát
 ## 🌟 Características
 
 - ✅ **Rastreo de Números:** Localización precisa y obtención de información de números telefónicos.
-- ✅ **Obtención de Cuentas:** Herramientas avanzadas para recuperación y gestión de cuentas.
 - ✅ **OSINT:** Extracción y análisis avanzado de información pública.
 - ✅ **Hacking Ético:** Automatización de procesos para auditorías y evaluaciones de seguridad.
 - ✅ **Monitoreo (SPY):** Vigilancia activa y seguimiento detallado.
@@ -25,6 +24,7 @@ Shan by Shaneke es una herramienta integral especializada en seguridad informát
 - Kali Linux
 - Ubuntu
 - Windows
+- Termux
 
 ## 🚀 Instalación
 
@@ -48,20 +48,23 @@ shan spy
 ## 🧩 Menú de Módulos
 
 1. Rastrear Número
-2. Obtener Cuenta
-3. OSINT
-4. Hacking
-5. SPY (Monitoreo)
-6. Recuperación de Datos (Forense)
-7. Metadatos
-8. WiFi Hack
-9. Historial (Sábana de Llamadas)
-10. Tutoriales
-0. Salir
+2. OSINT
+3. Hacking
+4. SPY (Monitoreo)
+5. Recuperación de Datos (Forense)
+6. Metadatos
+7. WiFi Hack
+8. Historial (Sábana de Llamadas)
+9. Tutoriales
+10. Obtener Cuenta (**En construcción 🚧**)
 
-## 🤝 Contribuciones
+## 🤝 Contribuir
 
-Contribuciones por: **Carlos Javier Nieves Guzmán (CJNG 🍁)**
+**Contribuidores:**
+- Carlos Javier Nieves Guzmán (CJNG 🍁)
+- Adrián Rodríguez 😇
+- Dr.Phone 📱
+- Adrián Correa (Odín ⚡)
 
 Para contribuir:
 
