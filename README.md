@@ -25,7 +25,15 @@ Shan by Shaneke es una herramienta integral especializada en seguridad informát
 - Ubuntu
 - Windows
 - Termux
+- 
+## 📋 Requerimientos
 
+- Git
+- Python
+- Visual Studio Code
+- Java
+- Docker
+- C++
 ## 🚀 Instalación
 
 ```bash
