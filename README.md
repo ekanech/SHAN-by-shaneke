@@ -8,7 +8,7 @@
 
 Shan by Shaneke es una herramienta integral especializada en seguridad informática, diseñada para realizar tareas avanzadas de OSINT, hacking ético, rastreo, monitoreo, análisis forense, recuperación de datos, entre otras funcionalidades. Este proyecto facilita y automatiza procesos relacionados con la obtención, análisis y gestión de información sensible.
 
-## 🌟 Características   (en construccion)
+## 🌟 Características   (**En construcción 🚧**)
 
 - ✅ **Rastreo de Números:** Localización precisa y obtención de información de números telefónicos.
 - ✅ **OSINT:** Extracción y análisis avanzado de información pública.
@@ -66,7 +66,7 @@ shan spy
 7. WiFi Hack
 8. Historial (Sábana de Llamadas)
 9. Tutoriales
-10. Obtener Cuenta (**En construcción 🚧**)
+10. Obtener Cuenta 
 
 ## 🤝 Contribuir
 
